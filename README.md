@@ -86,8 +86,6 @@ The supplier-side opportunity is deliberately separated from the current prototy
 
 Product managers and product managers’ managers should start with [`docs/AI_CAPABILITY_REVIEW_BRIEF.md`](docs/AI_CAPABILITY_REVIEW_BRIEF.md). It states what Aera should do and must not do at each sourcing touchpoint, at the level required to review the product without making implementation decisions for the AI engineer.
 
-The decision ledger, screen maps, runtime assets, and verification files remain available as supporting evidence for detailed product-development review. They are not the starting point for understanding the product.
-
 ## Run locally
 
 ```bash
