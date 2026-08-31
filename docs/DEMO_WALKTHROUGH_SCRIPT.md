@@ -1,43 +1,67 @@
-# Aera demo walkthrough
+# Aera demo script
 
-Audience: procurement manager. Keep the narration focused on the work Aera performs and the decision the buyer remains responsible for.
+Audience: procurement manager.
 
-## Opening
+Tone: practical and direct. Explain the work Aera takes on, the evidence it keeps visible, and the decisions that remain with the buyer.
 
-“Aera helps move a sourcing request from business need to award decision. The demo uses one packaging RFx, five suppliers, thirty line items, and responses that arrive in different formats.”
+## Opening — the problem
+
+“A sourcing request rarely arrives as a clean document. The RFx has to be built from scattered information, suppliers reply in their own formats, and the award still has to be made quickly and defended with evidence.
+
+This demo shows how Aera helps carry that work from business need to award decision.”
 
 Click **Try Me**.
 
-## 1 — Create and approve RFx
+## 1 — Create and approve the RFx
 
-“I start with the business need and the sources that govern it. Aera reads the policy, current requirement, prior RFx structure, and supporting specification. It turns those inputs into a draft RFx and surfaces the details that need buyer confirmation. I review the line items, questionnaire, terms, and issues, then approve the RFx before it can be sent.”
+“I start with the business need and the sources that should shape it. Aera brings together the relevant policy, current requirement, prior RFx structure, and supporting information.
 
-Demo action: confirm the procurement ask, generate the draft, open the RFx PDF, confirm the visible issues, and approve the RFx.
+It turns those inputs into a draft RFx and points out details that could affect what suppliers are asked to quote. I can inspect the scope, thirty line items, questionnaire, terms, and source basis. Aera surfaces the gaps; I decide how they should be resolved and approve the RFx.”
+
+Demo actions: confirm the procurement ask, generate the draft, open the RFx PDF, review the surfaced issues, confirm their treatments, and approve the RFx.
+
+“Aera has prepared the sourcing request. It has not approved or sent anything on my behalf.”
 
 ## 2 — Invite suppliers
 
-“Aera prepares the invitation from the approved RFx, matches it to the confirmed supplier contacts, and keeps the subject, message, attachment, and delivery result together for each supplier. The buyer sends the package; Aera records what happened to every invitation.”
+“Next, Aera prepares the invitation from the approved RFx. It brings together the supplier contact, subject, message, attachment, response instructions, and supplier-specific details.
 
-Demo action: review the contacts and invitation package, open the RFx attachment and message source, send the invitations, then show the delivery results and prepared BoxSmith retry.
+It also records the outcome for each invitation, so I can see whether the approved RFx reached each supplier and what needs attention if delivery fails.”
 
-## 3 — Lock supplier responses
+Demo actions: review the five confirmed contacts, open the invitation message and RFx attachment, send the invitations, and show the per-supplier delivery results and prepared retry.
 
-“Suppliers do not reply in one standard format. Aera associates messages and attachments with the right RFx, reads the response evidence, and identifies the specific gaps that prevent a fair comparison. It drafts the smallest useful follow-up, but the buyer approves that follow-up. When the response arrives, Aera reassesses it and preserves the history. We continue until every supplier has a complete or explicitly authorized outcome.”
+“Aera prepares and tracks the communication. I remain the person who sends it.”
 
-Demo action: review supplier history, open response evidence, inspect the open points for each supplier, confirm the prepared treatments, and continue only after the aggregate gate is resolved.
+## 3 — Move supplier responses toward completeness
+
+“Suppliers do not reply in one standard format. Aera reads the emails, spreadsheets, documents, and image evidence as they arrive. It connects relevant messages—even when a supplier replies on another thread—and keeps the response history together.
+
+It then identifies the specific information that is missing, ambiguous, conflicting, or unsupported for a fair comparison. Instead of asking me to investigate everything from scratch, it drafts the smallest useful follow-up. I approve it, and Aera reassesses the next supplier response without losing the earlier history.”
+
+Demo actions: open supplier history and source files, review each supplier’s open points, approve the prepared follow-ups or treatments, and continue only when every supplier has a complete or policy-authorized outcome.
+
+“Aera moves responses toward completeness. It does not mark a supplier complete just because a message was sent, and it does not invent an answer the supplier has not provided.”
 
 ## 4 — Compare responses
 
-“Aera maps every supplier’s response to the same thirty RFx lines. It calculates the comparison totals deterministically, applies the approved Finance FX rate to the USD response, preserves the original currency, and links each value to its source. The comparison screen is for understanding the offers—not for asking Aera to make the award. I can ask questions about coverage, price, delivery, terms, or evidence.”
+“Once the responses are ready, Aera maps them to the same RFx lines and questionnaire questions. It brings the offers into one comparison, calculates the totals on the approved basis, and keeps the original values beside the normalized values.
 
-Demo action: open the comparison, select suppliers to inspect source files and line-level claims, use a sample prompt, review exceptions, and acknowledge that the comparison and analysis are sufficient for an award recommendation.
+Here, the USD response is converted using the approved Finance rate, while the original currency and source remain visible. I can inspect the evidence behind a supplier, a line, or an exception, and ask Aera questions about coverage, price, delivery, terms, or quality.”
 
-## 5 — Decide and defend award
+Demo actions: open the comparison, select suppliers to inspect their evidence, expand line-level claims, use a sample analysis prompt, and review visible exceptions.
 
-“Now Aera applies the approved evaluation basis to the completed comparison and prepares a recommendation proposal. It shows the trade-offs and the evidence behind them, then drafts the award rationale. Aera does not approve the award. I review or edit the rationale and explicitly approve the final decision.”
+“This screen helps me understand the offers. Aera is not making the award here. I acknowledge the comparison only after I am satisfied that it is accurate and sufficient for the next decision.”
 
-Demo action: prepare the recommendation, inspect the trade-offs and evidence links, review the drafted rationale, and click **Approve award**.
+## 5 — Decide and defend the award
+
+“Now Aera applies the approved evaluation basis to the completed comparison and prepares a recommendation proposal. It shows the supplier it proposes, the trade-offs behind that proposal, and the evidence supporting those trade-offs.
+
+It also drafts the award rationale. I can review or edit that explanation before approving the award. Aera makes the reasoning easier to reconstruct, but the decision and approval remain mine.”
+
+Demo actions: prepare the recommendation, review the decision basis, trade-offs, and evidence links, review the drafted rationale, and click **Approve award**.
+
+“The sourcing thread now ends with an approved award record, with the comparison, rationale, and evidence preserved together.”
 
 ## Closing
 
-“The result is an approved award with the comparison, rationale, criteria, and evidence preserved together—so the decision can be explained, not just asserted.”
+“The value is not an unexplained recommendation. Aera helps me get to the decision with the work reconstructed, the trade-offs visible, and the evidence ready to defend.”
