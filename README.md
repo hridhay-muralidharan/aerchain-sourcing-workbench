@@ -16,6 +16,8 @@ Aera keeps that work in one sourcing thread:
 
 The prototype is designed for product-development review. It is not a production procurement system.
 
+That distinction matters: the point of this repository is to make the product behavior reviewable before discussing scale, integrations, or deployment hardening.
+
 ## What the prototype demonstrates
 
 The guided demo uses a corrugated-packaging RFx with five suppliers, thirty line items, questionnaire answers, attached documents, email threads, spreadsheets, HTML, CSV, and a low-quality mobile image.
@@ -27,6 +29,8 @@ The important product behavior is the separation between Aera’s work and the b
 - The procurement manager confirms treatments, approves the RFx, approves follow-ups, acknowledges the comparison, and approves the award.
 - Aera never silently invents values, treats a filename as proof, converts an ambiguous value, or turns a recommendation into an approval.
 
+The prototype therefore makes the buyer’s real work visible while keeping the agent’s contribution bounded. The central question for review is whether Aera can reduce the sourcing burden without weakening procurement control.
+
 ## Why procurement policy is central
 
 The organization’s procurement policy is the grounding layer across the sourcing journey. Different clauses become relevant at different stages:
@@ -37,6 +41,8 @@ The organization’s procurement policy is the grounding layer across the sourci
 - Award: evaluation criteria, weights, authority, exceptions, rationale, and approval.
 
 Aera must retrieve the applicable policy clauses for the current stage and action. The product does not invent universal blockers or exceptions. Each policy-dependent decision retains its source, version, conditions, authority, and approval state.
+
+That creates the most important product boundary: Aera can apply an organization’s rules, but it cannot create authority merely by sounding confident. This raises the next product question: how should the system help an organization that does not yet have a usable policy?
 
 ## Capability evolution when an organization has no policy
 
@@ -56,6 +62,8 @@ If the organization has neither an approved policy nor useful historical RFxs, A
 
 The principle is capability maturity before theoretical coverage: lack of policy must never become permission for the model to manufacture enterprise rules.
 
+This policy problem is one example of a broader pattern in the workflow. Procurement is full of organizational standards that must be translated into a specific sourcing action without losing provenance or accountability. The same pattern appears on the other side of the exchange.
+
 ## Adjacent opportunity: the supplier-side agent
 
 The assignment exposes a second problem. Suppliers often maintain their own standard quotation format while responding to many procurers, each with different RFx structures, fields, units, questionnaires, and document requirements. This creates avoidable back-and-forth and can disadvantage a supplier whose response takes longer to align with the procurer’s format.
@@ -72,6 +80,8 @@ An adjacent supplier-side product could let a supplier maintain one internal sou
 
 This is not part of the current procurement-manager prototype. It is an adjacent product direction with a different actor, authority model, data boundary, and evaluation set. The common platform opportunity is evidence-backed translation between organizational standards without forcing either party to abandon its internal operating model.
 
+The supplier-side opportunity is deliberately separated from the current prototype so the buyer workflow remains focused. It is included here because it shows where the same evidence-backed translation capability could extend next, and gives product leadership a concrete direction for future discovery.
+
 ## Review assets for product leadership
 
 The repository includes the artifacts needed for product-development review:
@@ -84,6 +94,8 @@ The repository includes the artifacts needed for product-development review:
 - `data/demo-runtime/evaluation-hidden/` — evaluation material kept outside the deployed runtime.
 
 The product manager reviews problem framing, workflow, scope, behavior, and trade-offs. The product manager’s manager reviews completeness, strategic implications, risks, and evolution paths. Designer, engineering, AI/evaluation, procurement, security, and compliance reviewers can use the same decision spine at their level of detail.
+
+Together, these artifacts let reviewers move from “is this the right problem?” to “does the product behave correctly?” and finally to “what should this become beyond the prototype?”
 
 ## Run locally
 
