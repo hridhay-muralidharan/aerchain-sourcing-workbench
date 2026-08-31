@@ -1,0 +1,31 @@
+line_id,description,dimensions_mm,board_grade,ply,quantity,unit,price,currency,pricing_basis,test_standard,deviation
+L-01,Small shipper,400x300x250,kraft,5,13000,piece,8.75,INR,per piece,IS 2771,none
+L-02,Medium shipper,300x220x180,kraft,5,9500,piece,9.1,INR,per piece,IS 2771,none
+L-03,Large shipper,600x400x350,kraft,5,9000,piece,14.4,INR,per piece,IS 2771,none
+L-04,Accessory carton,250x180x120,kraft,3,7200,piece,7.8,INR,per piece,IS 2771,none
+L-05,Heavy-duty shipper,700x500x400,kraft,5,5600,piece,18.5,INR,per piece,IS 2771,none
+L-06,Small die-cut,220x160x100,kraft,3,4200,piece,5.6,INR,per piece,IS 2771,none
+L-07,Medium die-cut,350x250x160,kraft,5,4200,piece,8.3,INR,per piece,IS 2771,none
+L-08,Large die-cut,500x350x260,kraft,5,3800,piece,12.8,INR,per piece,IS 2771,none
+L-09,Long shipper,800x300x250,kraft,5,2400,piece,16.2,INR,per piece,IS 2771,none
+L-10,Flat pack carton,450x350x80,kraft,3,2600,piece,6.9,INR,per piece,IS 2771,none
+L-11,Sample carton A,200x150x100,kraft,3,1600,piece,4.4,INR,per piece,IS 2771,none
+L-12,Sample carton B,280x200x120,kraft,3,1600,piece,5.8,INR,per piece,IS 2771,none
+L-13,Export shipper A,550x400x300,kraft,5,6200,piece,13.6,INR,per piece,IS 2771,none
+L-14,Export shipper B,650x450x350,kraft,5,5200,piece,17.1,INR,per piece,IS 2771,none
+L-15,Divider set A,390x290x240,kraft,3,5200,set,2.9,INR,per piece,IS 2771,none
+L-16,Divider set B,590x390x340,kraft,3,4200,set,4.2,INR,per piece,IS 2771,none
+L-17,Returnable carton,500x400x300,kraft,5,3200,piece,15.8,INR,per piece,IS 2771,none
+L-18,Reinforced carton,600x450x350,kraft,5,3000,piece,19.4,INR,per piece,IS 2771,none
+L-19,Corner carton,320x240x200,kraft,5,2400,piece,9.7,INR,per piece,IS 2771,none
+L-20,Long accessory,750x220x180,kraft,3,1900,piece,11.6,INR,per piece,IS 2771,none
+L-21,Electronics carton,420x320x220,kraft,5,2700,piece,12.1,INR,per piece,IS 2771,none
+L-22,Motor carton,480x380x300,kraft,5,2200,piece,14,INR,per piece,IS 2771,none
+L-23,Spare parts carton,360x260x180,kraft,3,2400,piece,8.9,INR,per piece,IS 2771,none
+L-24,Top-load carton,520x420x320,kraft,5,1900,piece,16.4,INR,per piece,IS 2771,none
+L-25,Bottom-load carton,520x420x320,kraft,5,1900,piece,16.4,INR,per piece,IS 2771,none
+L-26,Partitioned carton,440x340x240,kraft,5,1700,piece,13.2,INR,per piece,IS 2771,none
+L-27,Archive carton,380x280x240,kraft,3,1300,piece,7.6,INR,per piece,IS 2771,none
+L-28,Display carton,600x300x250,kraft,5,1100,piece,12.5,INR,per piece,IS 2771,none
+L-29,Transit carton,700x450x350,kraft,5,1500,piece,17.8,INR,per piece,IS 2771,none
+L-30,Custom carton,900x600x450,kraft,5,900,piece,26,INR,per piece,IS 2771,none

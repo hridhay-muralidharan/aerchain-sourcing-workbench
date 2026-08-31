@@ -1,0 +1,174 @@
+{
+  "freezeVersion": "1.0",
+  "frozenAt": "2026-08-31",
+  "event": {
+    "id": "RFx-2026-014",
+    "category": "corrugated-packaging",
+    "lineCount": 30,
+    "supplierCount": 5
+  },
+  "sourceOfTruth": "manifest.json",
+  "runtimeInputs": [
+    {
+      "path": "business-need.md",
+      "bytes": 568,
+      "sha256": "e9fd15141d870c37395cc7d85a1dd8688156ebb67262bae981f2e1d919b50a56"
+    },
+    {
+      "path": "sources/policy/procurement-policy-fy2026.html",
+      "bytes": 1513,
+      "sha256": "e9ad1092ab2b900d784600605c013ebf2a8e3e7000490c0dadd2493c402c330f"
+    },
+    {
+      "path": "sources/past-rfx/packaging-rfx-fy2025.csv",
+      "bytes": 2355,
+      "sha256": "56a4bee4c5102f8ede438df30a6ba8cf6e79955306a47b5eba42d1ade66dad0f"
+    },
+    {
+      "path": "sources/past-rfx/Packaging RFx Template FY2025.xlsx",
+      "bytes": 4292,
+      "sha256": "5ff6849e4221d320c5ef5d581d32d0a293f62eed8e6ba8fbdd182297084bbcf2"
+    },
+    {
+      "path": "sources/past-rfx/packaging-rfx-fy2026-current.csv",
+      "bytes": 2325,
+      "sha256": "9ab26b103b1453a3f65138e09bfc33183f1991cf759e54c8d9c4737a3d404c37"
+    },
+    {
+      "path": "sources/supporting/pune-packaging-specification.html",
+      "bytes": 630,
+      "sha256": "39f5a9c05151a8f400226139467412a330aac5bca4d15a5dde7f8c59f4ddd21d"
+    },
+    {
+      "path": "sources/supporting/questionnaire.html",
+      "bytes": 665,
+      "sha256": "db2bc4464c6e348b446b8ba424985e10a677d62c35ddd6206e17f2d183ca9002"
+    },
+    {
+      "path": "sources/finance/northstar-finance-fx-rate-sheet.html",
+      "bytes": 321,
+      "sha256": "84b25eb0c3558f3a14feaea80cb1e47f19f9b476b7eef40e3c01857a6858874f"
+    },
+    {
+      "path": "sources/contacts/supplier-directory.eml",
+      "bytes": 628,
+      "sha256": "939cf25e1cb60b2da37c3fac0af9d995888eefb3b47961f8092cbc0a689a65dd"
+    },
+    {
+      "path": "sources/correspondence/last-year-rfx-invitation.eml",
+      "bytes": 346,
+      "sha256": "fd672ffa540d6be8292448c4dc35efe820ea8249c57ba3d8d2795211a718bc43"
+    },
+    {
+      "path": "sources/rfx-2026-014.pdf",
+      "bytes": 4848,
+      "sha256": "cd43e8d931eeaa99c3663bd710eee74df18d5e088caf6b08cd1df5b711f1ec60"
+    },
+    {
+      "path": "responses/kraftbox/response.eml",
+      "bytes": 427,
+      "sha256": "5affea807ddc7ac2a51d0eda5198446e2b61906791aefb4415b1b3028b80b589"
+    },
+    {
+      "path": "responses/kraftbox/quotation.csv",
+      "bytes": 2611,
+      "sha256": "6232e90ebcc19196cf4b3a120225b6d0647fb2f455c5296959861f164e28bd6b"
+    },
+    {
+      "path": "responses/kraftbox/KraftBox quotation.xlsx",
+      "bytes": 4287,
+      "sha256": "f2d01447b0e4420c64c532937aee81041d7bfca8bd4362f186dcd0e12c8f396d"
+    },
+    {
+      "path": "responses/kraftbox/KB-QMS-2026-081.docx",
+      "bytes": 1450,
+      "sha256": "e40785c2e450bdaf4cb83e1286465076584b7f657a4b4542c1a8cbdc5f5b9dae"
+    },
+    {
+      "path": "responses/packright/quotation.html",
+      "bytes": 3402,
+      "sha256": "d362a3ed5a13800f651ec6fb8134ea9caf75cc15ff92103c5c14c00d4b90b5b5"
+    },
+    {
+      "path": "responses/packright/QMS-2026-118.docx",
+      "bytes": 1396,
+      "sha256": "f053fd223754e4cedea6e71ce8ff98f82643b083d045f5477a3f74745e61f515"
+    },
+    {
+      "path": "responses/packright/line-item-quote.csv",
+      "bytes": 2664,
+      "sha256": "2728cd6ed4c59df3a4be72ae66e24a6891418df4eb7bb58742eb99901df62810"
+    },
+    {
+      "path": "responses/nexcorrugate/response.eml",
+      "bytes": 358,
+      "sha256": "8ab431f070163d1cbf45210c7a4a6ca68c0288f4f0537716096ad9e5b54872e5"
+    },
+    {
+      "path": "responses/nexcorrugate/follow-up.eml",
+      "bytes": 396,
+      "sha256": "93a5f731a920a724c3ef285c3f9441b2633400ec9d8ae44daaccd42f5e375a1e"
+    },
+    {
+      "path": "responses/nexcorrugate/line-item-quote.csv",
+      "bytes": 2600,
+      "sha256": "5d9c1e6f9bac5c8e07a28891a083c2632620506097d218abc521f9bfd353e28b"
+    },
+    {
+      "path": "responses/nexcorrugate/NC-QMS-2026-204.docx",
+      "bytes": 1392,
+      "sha256": "649d4596787f60a1dc22fcfad70b6db16ed09a0b3e9d1b81575c141baf906436"
+    },
+    {
+      "path": "responses/boxsmith/phone-photo.svg",
+      "bytes": 957,
+      "sha256": "5643a819feafebdb81e1e6a3c76c28e16361e94ad90645d57708b745ce33e449"
+    },
+    {
+      "path": "responses/boxsmith/follow-up.eml",
+      "bytes": 323,
+      "sha256": "76ccee6bc2ec116e0715e5c5469e2ded360c6ae13ec5783929d039008e3359ac"
+    },
+    {
+      "path": "responses/boxsmith/follow-up.csv",
+      "bytes": 2624,
+      "sha256": "77fafa4834a4378c98d3452cf5e3301fe12aff0e9e5e6405e676f4c7b7abd571"
+    },
+    {
+      "path": "responses/boxsmith/BS-QMS-2026-077.docx",
+      "bytes": 1391,
+      "sha256": "b1b6099dafb51910d3a4d0ca10c486f8863bab5d62f3bc712bdb3d7f5fd54006"
+    },
+    {
+      "path": "responses/greenfold/GreenFold quotation response.docx",
+      "bytes": 1964,
+      "sha256": "d28f4f8c71d4b8751b72252f35f94138a811bdb9edc85a831673f753e950212b"
+    },
+    {
+      "path": "responses/greenfold/follow-up.eml",
+      "bytes": 241,
+      "sha256": "0b52af7a8344d387563c4b0dfad74b75ec20a1d86f2e232b8274b55492eae829"
+    },
+    {
+      "path": "responses/greenfold/line-item-quote.csv",
+      "bytes": 2635,
+      "sha256": "274dadc566acaba2459ff54496a704f36e185440008476531dcab4711a4571cf"
+    },
+    {
+      "path": "responses/greenfold/GF-QMS-2026-091.docx",
+      "bytes": 1449,
+      "sha256": "2fdf8f1d06d161874404a60eb8421eabc81f7a3c15b9864b5b00d69f2d37f8c7"
+    },
+    {
+      "path": "events/message-delivery-events.json",
+      "bytes": 655,
+      "sha256": "dcd93610fec0d495a90018ac1a58c622bc1445d02ba20ec4e3cf9cd4f0d43467"
+    }
+  ],
+  "excludedFromRuntime": [
+    "evaluation-hidden/",
+    "README.md",
+    "runtime-freeze.json"
+  ],
+  "assertion": "This freeze records only runtime input identity and content hashes. It contains no expected findings, treatment list, answer key, or evaluation assertion."
+}

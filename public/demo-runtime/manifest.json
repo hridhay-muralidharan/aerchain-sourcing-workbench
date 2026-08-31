@@ -1,0 +1,116 @@
+{
+  "manifestVersion": "2.1",
+  "event": {
+    "id": "RFx-2026-014",
+    "category": "corrugated-packaging",
+    "lineCount": 30,
+    "supplierCount": 5
+  },
+  "runtimeBoundary": "Only paths listed here are runtime inputs; no expected findings or evaluation assertions.",
+  "sources": [
+    [
+      "business-need.md",
+      "business-need",
+      "md"
+    ],
+    [
+      "sources/policy/procurement-policy-fy2026.html",
+      "policy",
+      "html"
+    ],
+    [
+      "sources/past-rfx/packaging-rfx-fy2025.csv",
+      "historical-rfx",
+      "csv"
+    ],
+    [
+      "sources/past-rfx/Packaging RFx Template FY2025.xlsx",
+      "historical-rfx-template",
+      "xlsx"
+    ],
+    [
+      "sources/past-rfx/packaging-rfx-fy2026-current.csv",
+      "current-schedule",
+      "csv"
+    ],
+    [
+      "sources/supporting/pune-packaging-specification.html",
+      "supporting-specification",
+      "html"
+    ],
+    [
+      "sources/supporting/questionnaire.html",
+      "questionnaire",
+      "html"
+    ],
+    [
+      "sources/finance/northstar-finance-fx-rate-sheet.html",
+      "finance-rate-source",
+      "html"
+    ],
+    [
+      "sources/contacts/supplier-directory.eml",
+      "contacts",
+      "eml"
+    ],
+    [
+      "sources/correspondence/last-year-rfx-invitation.eml",
+      "prior-correspondence",
+      "eml"
+    ],
+    [
+      "sources/rfx-2026-014.pdf",
+      "approved-rfx",
+      "pdf"
+    ]
+  ],
+  "responses": [
+    [
+      "KraftBox Industries",
+      [
+        "responses/kraftbox/response.eml",
+        "responses/kraftbox/quotation.csv",
+        "responses/kraftbox/KraftBox quotation.xlsx",
+        "responses/kraftbox/KB-QMS-2026-081.docx"
+      ]
+    ],
+    [
+      "PackRight Solutions",
+      [
+        "responses/packright/quotation.html",
+        "responses/packright/QMS-2026-118.docx",
+        "responses/packright/line-item-quote.csv"
+      ]
+    ],
+    [
+      "NexCorrugate",
+      [
+        "responses/nexcorrugate/response.eml",
+        "responses/nexcorrugate/follow-up.eml",
+        "responses/nexcorrugate/line-item-quote.csv",
+        "responses/nexcorrugate/NC-QMS-2026-204.docx"
+      ]
+    ],
+    [
+      "BoxSmith Co.",
+      [
+        "responses/boxsmith/phone-photo.svg",
+        "responses/boxsmith/follow-up.eml",
+        "responses/boxsmith/follow-up.csv",
+        "responses/boxsmith/BS-QMS-2026-077.docx"
+      ]
+    ],
+    [
+      "GreenFold Packaging",
+      [
+        "responses/greenfold/GreenFold quotation response.docx",
+        "responses/greenfold/follow-up.eml",
+        "responses/greenfold/line-item-quote.csv",
+        "responses/greenfold/GF-QMS-2026-091.docx"
+      ]
+    ]
+  ],
+  "events": [
+    "events/message-delivery-events.json"
+  ]
+}

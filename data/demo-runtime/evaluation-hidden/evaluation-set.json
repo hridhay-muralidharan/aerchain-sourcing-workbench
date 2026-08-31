@@ -1,0 +1,43 @@
+{
+  "evaluationVersion": "1.0",
+  "createdAfterRuntimeFreeze": true,
+  "independentAuthoringBoundary": "This file is not listed in manifest.json and must never be supplied to the runtime agent.",
+  "cases": [
+    {
+      "caseId": "supplier-completeness-01",
+      "inputSlice": "KraftBox response package",
+      "expectedOutcome": "complete",
+      "assertions": ["all 30 RFx lines are represented", "line construction is explicit", "commercial fields are separate", "quality evidence is present"]
+    },
+    {
+      "caseId": "supplier-completeness-02",
+      "inputSlice": "PackRight response package",
+      "expectedOutcome": "policy-route-required",
+      "assertions": ["L-15 and L-16 per-piece basis remains a disclosed deviation", "the deviation is not silently converted to per-set", "affected lines are not directly comparable without approved treatment"]
+    },
+    {
+      "caseId": "supplier-completeness-03",
+      "inputSlice": "NexCorrugate initial and follow-up exchange",
+      "expectedOutcome": "complete-after-follow-up",
+      "assertions": ["the three initially missing lines are added", "the certificate is associated with the new response version", "the initial message remains preserved"]
+    },
+    {
+      "caseId": "supplier-completeness-04",
+      "inputSlice": "BoxSmith image, alternate-thread reply, workbook, and certificate",
+      "expectedOutcome": "complete-after-alternate-thread",
+      "assertions": ["the image is retained as original evidence", "the alternate thread is associated using combined RFx and supplier evidence", "USD values can be normalized only using the approved Finance source", "the later delivery remains visible for buyer treatment"]
+    },
+    {
+      "caseId": "supplier-completeness-05",
+      "inputSlice": "GreenFold response and quality follow-up",
+      "expectedOutcome": "complete-after-evidence-follow-up",
+      "assertions": ["the response contains all 30 line-level construction fields", "the initial missing quality evidence is not invented", "the later certificate is linked as new evidence", "the printing exclusion remains visible"]
+    },
+    {
+      "caseId": "rfx-integrity-01",
+      "inputSlice": "approved RFx PDF and current schedule",
+      "expectedOutcome": "approved-rfx-represented",
+      "assertions": ["the RFx has 30 current lines", "the PDF is multi-page and inspectable", "questionnaire and award basis are present", "source/version/approval context is visible"]
+    }
+  ]
+}

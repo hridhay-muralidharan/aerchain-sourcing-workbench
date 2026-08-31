@@ -1,0 +1,38 @@
+{
+  "eventId": "RFx-2026-014",
+  "rfVersion": "v1",
+  "initial": [
+    [
+      "KraftBox",
+      "out-kraftbox-001",
+      "delivered"
+    ],
+    [
+      "PackRight",
+      "out-packright-001",
+      "delivered"
+    ],
+    [
+      "NexCorrugate",
+      "out-nexcorrugate-001",
+      "delivered"
+    ],
+    [
+      "BoxSmith",
+      "out-boxsmith-001",
+      "bounced"
+    ],
+    [
+      "GreenFold",
+      "out-greenfold-001",
+      "delivered"
+    ]
+  ],
+  "retry": {
+    "supplier": "BoxSmith",
+    "original": "out-boxsmith-001",
+    "buyerConfirmedAlternate": "salesdesk@boxsmith.co",
+    "message": "out-boxsmith-002",
+    "status": "delivered"
+  }
+}
