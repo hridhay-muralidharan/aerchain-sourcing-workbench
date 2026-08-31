@@ -82,10 +82,6 @@ This is not part of the current procurement-manager prototype. It is an adjacent
 
 The supplier-side opportunity is deliberately separated from the current prototype so the buyer workflow remains focused. It is included here because it shows where the same evidence-backed translation capability could extend next, and gives product leadership a concrete direction for future discovery.
 
-## Review entry point
-
-Product managers and product managers’ managers should start with [`docs/AI_CAPABILITY_REVIEW_BRIEF.md`](docs/AI_CAPABILITY_REVIEW_BRIEF.md). It states what Aera should do and must not do at each sourcing touchpoint, at the level required to review the product without making implementation decisions for the AI engineer.
-
 ## Run locally
 
 ```bash
