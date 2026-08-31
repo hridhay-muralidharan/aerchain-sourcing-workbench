@@ -82,20 +82,11 @@ This is not part of the current procurement-manager prototype. It is an adjacent
 
 The supplier-side opportunity is deliberately separated from the current prototype so the buyer workflow remains focused. It is included here because it shows where the same evidence-backed translation capability could extend next, and gives product leadership a concrete direction for future discovery.
 
-## Review assets for product leadership
+## Review entry point
 
-The repository includes the artifacts needed for product-development review:
+Product managers and product managers’ managers should start with [`docs/AI_CAPABILITY_REVIEW_BRIEF.md`](docs/AI_CAPABILITY_REVIEW_BRIEF.md). It states what Aera should do and must not do at each sourcing touchpoint, at the level required to review the product without making implementation decisions for the AI engineer.
 
-- `docs/DECISION_LEDGER.md` — chronological product decisions and corrections; the implementation authority.
-- `docs/ACTIVE_PRODUCT_CONTRACT.md` — derived active product view.
-- `docs/SCREEN_2_IMPLEMENTATION_MAP.md`, `docs/SCREEN_3_IMPLEMENTATION_MAP.md`, `docs/SCREEN_5_IMPLEMENTATION_MAP.md` — screen-level implementation maps.
-- `docs/DEMO_WALKTHROUGH_SCRIPT.md` — procurement-manager-facing recording script.
-- `public/demo-runtime/` — viewable runtime demo sources and supplier response assets.
-- `data/demo-runtime/evaluation-hidden/` — evaluation material kept outside the deployed runtime.
-
-The product manager reviews problem framing, workflow, scope, behavior, and trade-offs. The product manager’s manager reviews completeness, strategic implications, risks, and evolution paths. Designer, engineering, AI/evaluation, procurement, security, and compliance reviewers can use the same decision spine at their level of detail.
-
-Together, these artifacts let reviewers move from “is this the right problem?” to “does the product behave correctly?” and finally to “what should this become beyond the prototype?”
+The decision ledger, screen maps, runtime assets, and verification files remain available as supporting evidence for detailed product-development review. They are not the starting point for understanding the product.
 
 ## Run locally
 
