@@ -18,5 +18,4 @@ The assignment is the job. The product prototype is one output of that job. Harn
 6. Independent scaffold review, AI review, and interaction review
 7. Assignment deliverables and completion evidence
 
-Current task: T002 — identify ambiguities, assumptions, and decision questions.
-
+Current task: T003 — produce and review the product requirements document.
