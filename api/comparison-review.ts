@@ -1,4 +1,4 @@
-import { askAI, body, json, readPublic } from './_lib.js';
+import { askAI, body, json, readPublic, validateApprovedRfx } from './_lib.js';
 
 export const config = { runtime: 'nodejs' };
 const policyPath = 'sources/policy/procurement-policy-fy2026.html';
@@ -15,7 +15,7 @@ const schema = { type: 'object', additionalProperties: false, properties: { find
 export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') return json(res, { error: 'POST required' }, 405);
   try {
-    const input = await body(req);
+    const input = await body(req); validateApprovedRfx(input.rfx);
     const observations = files.map(file => ({ file, content: readPublic(file).slice(0, 14000) }));
     const result = await askAI('Review this comparison evidence against the approved RFx and procurement policy. Return JSON with a findings array. Each finding must contain supplier, title, detail, severity (information, exception, or blocker), sourceFiles, and action. Return only material findings supported by the supplied text. Do not invent findings. Policy-permitted exceptions are exceptions, not blockers. Every finding must cite a supplied path. Do not recommend an award.', { comparison: input.comparison, policy: { path: policyPath, content: readPublic(policyPath) }, finance: { path: financePath, content: readPublic(financePath) }, observations });
     const findings = Array.isArray(result.findings) ? result.findings : [];

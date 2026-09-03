@@ -7,8 +7,8 @@ type Props = { rfx: Rfx | null; comparison: Comparison | null; proposal: any; ap
 function readable(value: any): string { if (typeof value === 'string') return value; if (!value || typeof value !== 'object') return String(value ?? ''); return value.claim || value.detail || value.description || value.reason || value.text || Object.entries(value).filter(([key]) => !['path', 'source', 'url'].includes(key)).map(([key, item]) => `${key}: ${readable(item)}`).join(' · '); }
 
 export default function AwardDecisionWorkspace({ rfx, comparison, proposal, approved, busy, onRecommend, onApprove, onDisable }: Props) {
-  if (!rfx || !comparison) return <section className="workspace"><div className="panel empty"><h2>Completed comparison required</h2><p>Finish the comparison analysis before preparing an award recommendation.</p></div></section>;
   const [rationale, setRationale] = useState('');
+  if (!rfx || !comparison) return <section className="workspace"><div className="panel empty"><h2>Completed comparison required</h2><p>Finish the comparison analysis before preparing an award recommendation.</p></div></section>;
   const recommendation = proposal?.supplier ? proposal : null;
   return <section className="workspace award-screen">
     <div className="kicker">05 / DECIDE AND DEFEND AWARD</div><h1>Make the right decision with the trade-offs in view.</h1><p className="lede">Aera applies the approved criteria and drafts the reasoning for your review.</p>

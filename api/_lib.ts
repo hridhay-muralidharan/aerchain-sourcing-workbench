@@ -31,6 +31,25 @@ export function readPublicBuffer(relative: string) {
   return fs.readFileSync(path.join(process.cwd(), 'public', 'demo-runtime', safe));
 }
 
+export function requireObject(value: unknown, label: string) {
+  if (!value || typeof value !== 'object') throw new Error(`${label} is required.`);
+  return value as Record<string, any>;
+}
+
+export function validateApprovedRfx(rfx: unknown) {
+  const value = requireObject(rfx, 'Approved RFx');
+  if (!value.title || !Array.isArray(value.items) || value.items.length === 0 || !Array.isArray(value.issues) || value.issues.some((issue: any) => issue.status === 'open')) {
+    throw new Error('The RFx must contain line items and no unresolved issues before this action.');
+  }
+  return value;
+}
+
+export function validateDecisionReady(comparison: unknown) {
+  const value = requireObject(comparison, 'Comparison');
+  if (value.decisionReady !== true || value.ready !== true) throw new Error('The comparison has not passed its deterministic and evidence-readiness gates.');
+  return value;
+}
+
 export async function askAI(instruction: string, input: unknown) {
   const key = process.env.OPENAI_API_KEY;
   if (!key) throw new Error('OPENAI_API_KEY is not configured.');

@@ -1,13 +1,15 @@
 # Aerchain Sourcing Workbench — Decision Ledger
 
-> **Canonical reading order:** use [IMPLEMENTATION_REFERENCE.md](IMPLEMENTATION_REFERENCE.md) for current implementation behavior. Use this ledger for canonical decision history, approvals, corrections, and audit evidence. Detailed legacy sections below are historical records, not implementation instructions.
+> Audience: maintainers, product reviewers, and implementers.
+> Purpose: preserve the chronological decision history, corrections, approvals, and error register.
+> Authority: canonical decision history. For the concise current product model use [ACTIVE_PRODUCT_CONTRACT.md](ACTIVE_PRODUCT_CONTRACT.md); for implementation mapping use [IMPLEMENTATION_INDEX.md](IMPLEMENTATION_INDEX.md); for verification evidence use [VERIFICATION_MATRIX.md](VERIFICATION_MATRIX.md).
 
 ## Current canonical model
 
-### Approved workflow decisions
+### Current canonical model (effective)
 
 1. **Project objective:** Make and defend the best-supported supplier decision for a business requirement.
-2. **Workflow:** Create and approve the RFx; invite suppliers; evaluate responses; decide and defend the award.
+2. **Workflow:** Create and approve the RFx; lock supplier responses; compare responses; decide and defend the award. Landing is a visible entry surface, not a workflow stage.
 3. **Stage 1 objective:** Establish a shared, sufficiently clear understanding of what the business needs to source.
 4. **Policy authority and evidence path:** Use confirmed organizational policy where available; otherwise use past RFQs to construct a proposal; allow user guidance at every branch; require explicit approval from the actual procurement authority before inferred or generated policy governs.
 
@@ -40,8 +42,8 @@
 - Current Stage 1 full step contract: approved after re-audit and mechanism audit.
 - Policy-clause applicability evaluation: approved.
 - Draft RFx generation and buyer approval behavior: approved within Stage 1.
-- Supplier release: not started.
-- Implementation: not authorized during alignment.
+- Supplier release: implemented as a simulated, buyer-triggered demo path.
+- Implementation: active prototype is mapped in IMPLEMENTATION_INDEX.md; statuses and remaining gaps are explicit there and in VERIFICATION_MATRIX.md.
 
 ## Chronological event log
 
@@ -7492,3 +7494,13 @@ The product must be built as a fresh implementation from the latest approved con
 | 602 | Screen 4 fast-first rendering approved | Screen 4 renders the comparison substrate before the slower live AI evidence review completes. The UI labels the interim state as `Reviewing`, then updates warnings and readiness when the live review returns; it does not block the buyer from seeing the comparison while analysis is in flight. |
 
 | 603 | Submission cleanup boundary recorded | The frozen prototype uses `src/`, `api/`, `scripts/`, `docs/`, `public/demo-runtime/`, and the non-public hidden evaluation set as its active submission surface. Historical archive material and build output are excluded from GitHub so stale implementation and contract artifacts cannot be mistaken for active requirements. |
+
+### E-194 — Current implementation pack drifted from the effective contract
+
+**When identified:** During the 2026-09-03 harness-alignment audit.
+
+**Incorrect outcome:** The current section pointed to a missing implementation reference, described implementation as unauthorized, and the implementation index presented existing screens as work to reconstruct. The prototype also rendered two award surfaces, exposed no follow-up approval action, duplicated the Finance FX rate in code, and kept award approval only in client state.
+
+**Correction:** The current authority now points to the active product contract, implementation index, architecture/runtime note, and verification matrix. The ledger chronology and error register remain historical. The canonical UI uses one award workspace; follow-up approval triggers reassessment; Finance rate is parsed from its approved runtime source; award commit validates readiness, supplier identity, rationale, and idempotency. Simulated and partial behavior remains explicitly labeled.
+
+| 604 | Harness-alignment audit recorded | Added AUDIT_2026-09-03.md, reconciled current canonical references, mapped all five visible surfaces to four workflow stages, added verification and architecture/runtime documentation, and recorded remaining prototype limitations without modifying the harness repository. |

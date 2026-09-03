@@ -1,63 +1,42 @@
-# Active product contract — clean restart
+# Active product contract
 
-This is a derived implementation view. The active decision ledger (`docs/DECISION_LEDGER.md`) is the sole implementation authority. Archived material is historical and must not be used as requirements.
+> Audience: product reviewers, procurement managers, and implementers.
+> Purpose: define the current canonical behavior of the Aera prototype.
+> Authority: derived from the approved decision ledger; runtime fixtures never override it.
 
-## Product promise
+## Product model
 
-Move quickly. Decide safely. Defend every award.
+Aera is a guided sourcing workbench for a procurement manager. It turns a business need and authorized sources into an approved RFx, moves supplier replies toward a resolved comparison, and helps the buyer make and defend an award. Aera interprets, extracts, maps, analyzes, and proposes. Deterministic mechanisms validate, calculate, preserve provenance, enforce gates, and commit records. The procurement manager keeps authority over requirements, follow-ups, comparison acknowledgment, and award approval.
 
-The product is a guided sourcing journey for a procurement manager: bring a business need and its permitted sources together, produce an RFx the buyer can approve, invite suppliers, move relevant supplier replies toward completeness, understand the normalized comparison, then make and defend the award.
+The workflow has four stages and five visible surfaces. Landing is the entry surface; it is not a workflow stage.
 
-## User-facing screens
+| Visible surface | Workflow stage | Entry state | Exit state |
+|---|---|---|---|
+| 1. Landing | — | Buyer has not started | Guided demo opened |
+| 2. Create and approve RFx | 1 | Business need and selected sources available | approved-rfx-ready-for-supplier-invitation |
+| 3. Lock supplier responses | 2 | Approved RFx and confirmed supplier contacts | responses-resolved-for-comparison |
+| 4. Compare responses | 3 | Resolved supplier outcomes and evidence | Buyer acknowledgment recorded; award recommendation enabled |
+| 5. Decide and defend award | 4 | Acknowledged, decision-ready comparison | award-approved with award record |
 
-1. Landing — explain the procurement burden, the relief, the four-step path, and start the guided demo.
-2. Create and approve RFx — one workspace from source review through explicit RFx approval. It ends only at `approved-rfx-ready-for-supplier-invitation`.
-3. Invite suppliers — confirm recipients, invitation, package, and delivery; buyer explicitly sends. Supplier replies may arrive in any shape and over multiple messages.
-4. Compare responses — move relevant responses toward completeness, extract/map/normalize, show provenance and exceptions, support analysis for understanding, and require buyer acknowledgment before award recommendation.
-5. Decide and defend award — apply approved criteria, show recommendation proposal with trade-offs and evidence, draft rationale, handle permitted criteria changes, and commit the buyer's approval.
+## Responsibilities and boundaries
 
-## Product behavior rules
+- AI proposes RFx structure, identifies evidence-backed issues, extracts and maps response claims, explains comparison evidence, and proposes an award rationale.
+- Deterministic code owns schema validation, source paths, versions, calculations, currency normalization, readiness gates, permissions, idempotency, persistence boundaries, rendering safety, and record identifiers.
+- The buyer confirms the procurement ask, treats RFx issues, approves the RFx, approves follow-ups, acknowledges comparison sufficiency, edits or accepts rationale, and approves the award.
+- AI receives only the current task and scoped approved sources. The hidden evaluation set is never sent to AI.
+- Missing, unknown, conflicting, and non-comparable values remain distinct. No value is invented.
 
-- Every AI output is a proposal or interpretation, never an approval or state change.
-- Deterministic mechanisms enforce schema, evidence/provenance, permissions, state gates, calculations, normalization, persistence, rendering, export, and sending.
-- The AI receives only the current task, scoped source content, and user guidance. It must not receive evaluation cases, answer keys, treatment lists, or hidden expected outcomes.
-- Relevance is evidence-based. A filename or email thread alone is not truth. Candidate sources are surfaced with reasons and require buyer confirmation where the contract requires it.
-- Missing, unknown, conflicting, and non-comparable are distinct states. No value is invented. Unsupported claims are blocked or visibly marked.
-- Policy is versioned and stage-aware. It defines how to treat a situation; the product does not invent universal hard blockers or exceptions outside policy.
-- Buyer guidance is allowed at every stage. The buyer is the head pilot; Aera is the co-pilot.
-- Any material uncertainty must expose the missing/conflicting evidence and an actionable resolution path. Approval cannot silently bypass unresolved conditions.
+## Approved surface copy
 
-## Approved copy
+- Hero: Move quickly. Decide safely. Defend every award.
+- Supporting line: Aera, our AI sourcing agent helps you move from business need to award decision.
+- Pain: Building an RFx takes time. Suppliers don’t follow your format. Justifying the award is hardest of all.
+- Landing tracks: Without Aera / With Aera.
+- Primary CTAs: Try Me / Experience the magic.
+- Comparison acknowledgment: I acknowledge that the comparison and resulting analysis are accurate and sufficient for award recommendation.
 
-Hero headline: `Move quickly. Decide safely. Defend every award.`
+## Runtime inputs and completion
 
-Pain: `Building an RFx takes time. Suppliers don’t follow your format. Justifying the award is hardest of all.`
+The demo uses a corrugated-packaging RFx fixture with five suppliers and thirty lines. It is evidence for the guided runtime, not a universal requirement. Product completion means the required state transition and evidence are available; fixture completion means the expected demo assets are present.
 
-Relief: `Get an RFx in a couple of clicks, a supplier comparison that doesn’t break your head, and an award you can explain with confidence.`
-
-Hero supporting line: `Aera, our AI sourcing agent helps you move from business need to award decision.`
-
-Landing comparison tracks: `Without Aera` / `With Aera`, with the three approved supplied pain-to-relief pairs recorded in Decision 570.
-
-Workflow heading: `Here’s what Aera, our AI Sourcing Agent can do for you`
-
-- `Shapes the business need, policy, and past RFxs into an RFx you can review and approve.`
-- `See the complete history with each supplier, track and close the open points.`
-- `Turns every supplier reply into one side-by-side comparison.`
-- `Makes and helps you defend the award with clear trade-offs and evidence.`
-
-Demo eyebrow: `TRY AERA IN ACTION`
-Demo line: `See the sourcing journey from RFx to award`
-Hero CTA: `Try Me`
-Bottom guided-demo CTA: `Experience the magic`
-
-## State gates
-
-- Stage 1: explicit buyer approval of generated RFx.
-- Stage 2: explicit buyer send of a complete package to confirmed recipients.
-- Stage 3: deterministic readiness check, then buyer acknowledgment: `I acknowledge that the comparison and resulting analysis are accurate and sufficient for award recommendation.`
-- Stage 4: explicit buyer approval of the award proposal and rationale.
-
-## Demo constraints
-
-The guided demo has prepared sources and responses that users can view. Add source, download, remove, edit, and similar mutation controls are visible but disabled with direct limitation copy. The demo ends in a successful award approval; criteria change and no-award are visible but disabled.
+A reviewer should be able to follow Landing → RFx approval → supplier delivery and response review → comparison and acknowledgment → award proposal and buyer commit. Verification must cover state gates, API validation, source provenance, AI boundaries, fixture isolation, and the successful browser journey—not only text presence.

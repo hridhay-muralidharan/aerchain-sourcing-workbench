@@ -1,86 +1,47 @@
 # Aera — AI sourcing agent
 
-## Product review brief
+> Audience: product reviewers, procurement managers, and implementers.
+> Purpose: introduce the prototype and route readers to its evidence pack.
+> Authority: concise project overview; the decision ledger and active contract govern behavior.
 
-This repository contains a working prototype of Aera, an AI sourcing agent for procurement managers.
+Aera is a product-development prototype for procurement managers. It helps reconstruct the sourcing workflow from a business need to an explainable supplier-award decision:
 
-A procurement manager is accountable for moving from a business need to a supplier award quickly and safely. The work is difficult because the RFx must be constructed from scattered inputs, supplier replies arrive in different formats and across multiple messages, and the final award must be supported by explicit trade-offs and evidence.
+1. create and approve an RFx;
+2. invite suppliers and track delivery;
+3. move supplier responses toward completeness;
+4. compare responses with provenance and visible exceptions; and
+5. prepare and defend an award for buyer approval.
 
-Aera keeps that work in one sourcing thread:
+The prototype is intentionally bounded. Aera interprets, extracts, maps, analyzes, and proposes. Deterministic mechanisms calculate, validate, preserve provenance, enforce state transitions, and record approvals. The procurement manager retains authority over requirements, follow-ups, comparison readiness, and the award.
 
-1. Create and approve an RFx from the business need and authorized sources.
-2. Invite suppliers and track the outcome of each invitation.
-3. Move relevant supplier responses toward completeness through evidence-backed follow-up.
-4. Compare responses on a common basis while preserving original values and provenance.
-5. Prepare and approve an award that the buyer can explain with clear trade-offs and evidence.
+This is not a production procurement system. It is a reviewable product and implementation artifact designed to make workflow behavior, uncertainty, authority, and failure handling visible before production hardening.
 
-The prototype is designed for product-development review. It is not a production procurement system.
+## Start here
 
-That distinction matters: the point of this repository is to make the product behavior reviewable before discussing scale, integrations, or deployment hardening.
+- [Documentation index](docs/README.md) — what each document is for and where to go next.
+- [Demo walkthrough](docs/DEMO_WALKTHROUGH_SCRIPT.md) — the intended five-screen guided journey.
+- [Active product contract](docs/ACTIVE_PRODUCT_CONTRACT.md) — concise user-facing behavior and boundaries.
+- [AI capability brief](docs/AI_CAPABILITY_REVIEW_BRIEF.md) — what the AI should and should not do.
+- [Implementation index](docs/IMPLEMENTATION_INDEX.md) — mapping from product areas to implementation and verification work.
+- [Decision ledger](docs/DECISION_LEDGER.md) — canonical decision authority and full historical lineage.
+- [Product-development method](docs/PRODUCT_DEVELOPMENT_METHOD.md) — reusable principles extracted from the harness work.
 
-## What the prototype demonstrates
+## What the guided demo demonstrates
 
-The guided demo uses a corrugated-packaging RFx with five suppliers, thirty line items, questionnaire answers, attached documents, email threads, spreadsheets, HTML, CSV, and a low-quality mobile image.
+The seeded scenario is a corrugated-packaging RFx with five suppliers and thirty line items. Evidence arrives through documents, spreadsheets, email, HTML, CSV, and a low-quality mobile image. The demo makes the difficult parts of sourcing inspectable:
 
-The important product behavior is the separation between Aera’s work and the buyer’s authority:
+- supplier replies arrive in different formats and across multiple messages;
+- missing, ambiguous, conflicting, and non-comparable values remain distinct;
+- original values remain visible beside normalized values;
+- policy and source evidence remain attached to material decisions;
+- follow-ups, sends, comparison acknowledgment, and award approval remain explicit human actions; and
+- the final award proposal contains trade-offs, evidence, and an editable rationale.
 
-- Aera interprets, extracts, maps, drafts, analyzes, and proposes.
-- Deterministic mechanisms calculate, normalize, validate, preserve provenance, enforce state transitions, and record approvals.
-- The procurement manager confirms treatments, approves the RFx, approves follow-ups, acknowledges the comparison, and approves the award.
-- Aera never silently invents values, treats a filename as proof, converts an ambiguous value, or turns a recommendation into an approval.
+## Product-development boundary
 
-The prototype therefore makes the buyer’s real work visible while keeping the agent’s contribution bounded. The central question for review is whether Aera can reduce the sourcing burden without weakening procurement control.
+The active implementation is derived from the decision ledger. The active product contract and implementation index are navigation and synthesis views; they may not add or silently reinterpret requirements. Historical reasoning remains useful for understanding why a decision exists, but it is not a substitute for the current canonical decision.
 
-## Why procurement policy is central
-
-The organization’s procurement policy is the grounding layer across the sourcing journey. Different clauses become relevant at different stages:
-
-- RFx construction: required fields, response instructions, and approval requirements.
-- Supplier response completeness: required evidence, commercial fields, delivery treatment, and clarification rules.
-- Comparison: normalization, currency treatment, comparability, exceptions, and inclusion rules.
-- Award: evaluation criteria, weights, authority, exceptions, rationale, and approval.
-
-Aera must retrieve the applicable policy clauses for the current stage and action. The product does not invent universal blockers or exceptions. Each policy-dependent decision retains its source, version, conditions, authority, and approval state.
-
-That creates the most important product boundary: Aera can apply an organization’s rules, but it cannot create authority merely by sounding confident. This raises the next product question: how should the system help an organization that does not yet have a usable policy?
-
-## Capability evolution when an organization has no policy
-
-The prototype supports the confirmed-policy path. Policy generation is a separate capability with a higher accuracy and governance bar.
-
-### Level 1 — Confirmed policy, supported from day one
-
-The client provides an approved, versioned procurement policy. Aera retrieves the relevant clauses and applies them with provenance throughout the workflow.
-
-### Level 2 — Policy proposal from historical procurement evidence
-
-If no approved policy exists but the organization has past RFx documents and buyer guidance, a future Aera capability can identify recurring rules and propose a policy or policy structure. This requires a purpose-built model, high-quality annotated policy/RFx training data, evaluation across organizations, client validation, and explicit approval before the proposal governs work.
-
-### Level 3 — Policy proposal without historical organizational evidence
-
-If the organization has neither an approved policy nor useful historical RFxs, Aera may eventually propose starting points based on validated cross-organization knowledge. This is a later extension, not a production fallback. It must be clearly labeled as a proposal, validated by the client’s authorized policy owner, and prevented from silently governing procurement.
-
-The principle is capability maturity before theoretical coverage: lack of policy must never become permission for the model to manufacture enterprise rules.
-
-This policy problem is one example of a broader pattern in the workflow. Procurement is full of organizational standards that must be translated into a specific sourcing action without losing provenance or accountability. The same pattern appears on the other side of the exchange.
-
-## Adjacent opportunity: the supplier-side agent
-
-The assignment exposes a second problem. Suppliers often maintain their own standard quotation format while responding to many procurers, each with different RFx structures, fields, units, questionnaires, and document requirements. This creates avoidable back-and-forth and can disadvantage a supplier whose response takes longer to align with the procurer’s format.
-
-An adjacent supplier-side product could let a supplier maintain one internal source of truth and generate a procurer-specific response for each tender:
-
-- ingest the supplier’s standard catalogue, commercial terms, certifications, and response library;
-- interpret the procurer’s RFx and questionnaire;
-- map the supplier’s internal fields to the procurer’s requested structure;
-- identify missing, ambiguous, or unsupported answers before submission;
-- produce a personalized response in the procurer’s format while preserving the supplier’s internal standard;
-- show the supplier the evidence and assumptions behind every generated answer;
-- require supplier approval before submission.
-
-This is not part of the current procurement-manager prototype. It is an adjacent product direction with a different actor, authority model, data boundary, and evaluation set. The common platform opportunity is evidence-backed translation between organizational standards without forcing either party to abandon its internal operating model.
-
-The supplier-side opportunity is deliberately separated from the current prototype so the buyer workflow remains focused. It is included here because it shows where the same evidence-backed translation capability could extend next, and gives product leadership a concrete direction for future discovery.
+The prepared runtime dataset supports the guided demo. It is not a requirements source. The hidden evaluation set is not deployed and must not be exposed to the AI during runtime.
 
 ## Run locally
 
@@ -88,8 +49,6 @@ The supplier-side opportunity is deliberately separated from the current prototy
 npm install
 npm run dev
 ```
-
-The deployed prototype uses the OpenAI Responses API when `OPENAI_API_KEY` is configured in Vercel. The model temperature is set to `0`. Fake SMTP is used for the invitation path. AI extraction, evidence review, comparison analysis, and award proposal remain live.
 
 Useful checks:
 
@@ -99,10 +58,12 @@ npm run build
 npm run verify:contracts
 npm run verify:assets
 npm run verify:prototype
+npm run verify:workflow
 ```
 
-## Submission and deployment
+The deployed prototype uses the OpenAI Responses API when `OPENAI_API_KEY` is configured in Vercel. The live-provider and workflow checks cover the AI and deterministic paths separately where applicable.
 
-GitHub: [hridhay-muralidharan/aerchain-sourcing-workbench](https://github.com/hridhay-muralidharan/aerchain-sourcing-workbench)
+## Public proof
 
-Live prototype: [aerchain-sourcing-workbench.vercel.app](https://aerchain-sourcing-workbench.vercel.app/)
+- [GitHub repository](https://github.com/hridhay-muralidharan/aerchain-sourcing-workbench)
+- [Live prototype](https://aerchain-sourcing-workbench.vercel.app/)

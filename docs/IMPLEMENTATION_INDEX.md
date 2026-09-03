@@ -1,27 +1,20 @@
-# Implementation index — derived from the decision ledger
+# Implementation index
 
-Status: frozen prototype implementation index. This is a navigation and traceability view, not a source of truth. The only authority is `docs/DECISION_LEDGER.md`.
+> Audience: engineers and technical reviewers.
+> Purpose: map the current contract to source files, APIs, fixtures, and executed checks.
+> Authority: derived implementation view; the decision ledger remains authoritative.
 
-## Reading rule
+Status vocabulary: Implemented = exercised by code and a check; Partial = visible path exists but a contract layer is incomplete; Simulated = intentionally fake integration; Stubbed = placeholder; Unverified = no executed evidence.
 
-An implementation area is not defined by one ledger row. Each row below is an anchor for a dependency closure. Before implementation, the closure must include every approved decision that affects the area’s outcome, UI, data/state, AI behavior, deterministic behavior, guardrails, assets, tests, and deployment. Candidate decisions must be resolved through their complete chronological lineage: corrections, supersession, approval state, and dependencies. Any missing or contradictory dependency blocks implementation.
+| Area | Source / API | Runtime evidence | Verification | Status | Ledger lineage |
+|---|---|---|---|---|---|
+| Landing | src/main.tsx, src/contract.ts | public/demo-runtime/business-need.md | verify:contracts, verify:prototype | Implemented | 570, 584 |
+| Stage 1 — Create and approve RFx | src/main.tsx; api/intake.ts; api/_lib.ts | policy, schedule, template, specification, questionnaire | verify:contracts, verify:prototype, TypeScript | Partial — approval record/version remains client-side | 096, 145, 544–545 |
+| Stage 2 — Lock supplier responses | src/SupplierExchangeWorkspace.tsx; api/mail/send.ts; api/completeness.ts | contacts, delivery events, five response sets | verify:assets, verify:prototype | Partial — delivery is simulated; reassessment is fixture-driven | 489, 496–499, 592–597 |
+| Stage 3 — Compare responses | src/ComparisonWorkspace.tsx; api/comparison.ts; api/comparison-review.ts | schedule, claims, Finance FX, policy | verify:assets, verify:contracts, TypeScript | Partial — richer policy exception states remain | 500, 503–504, 599–602 |
+| Stage 4 — Decide and defend award | src/AwardDecisionWorkspace.tsx; api/award.ts; api/award-commit.ts | approved RFx, policy, comparison evidence | verify:contracts, TypeScript | Partial — demo process store, not durable multi-user persistence | 554, 600–603 |
+| AI boundaries | api/_lib.ts and AI endpoints | scoped public runtime only | verify:live when configured; source review | Partial | 496, 548 |
+| Fixture boundary | data/demo-runtime and public/demo-runtime | public manifest; hidden evaluation only under data | verify:assets | Implemented; drift check remains | 457–489, 603 |
+| Verification/deployment | scripts/*.mjs, Vercel | build output excluded | test, build, verify:* | Partial — live workflow is external | 548–561 |
 
-## Product areas and initial ledger anchors
-
-| Implementation area | User-facing or system outcome | Initial ledger anchors | Closure status |
-|---|---|---|---|
-| Product entry / landing | Procurement manager understands the burden, relief, sourcing path, and starts the guided demo | 219–250, plus all copy, UI, demo-entry, and synthesis corrections | To reconstruct |
-| Stage 1 — Create and approve RFx | An approved RFx is ready for supplier invitation | 251–321 and all RFx, policy, schema, source, issue, approval, format, and transition decisions | To reconstruct |
-| Stage 2 — Invite suppliers | The approved RFx is sent through the selected channel to confirmed recipients and delivery outcomes are recorded | 319–321, 461–462, 501, 552–553, plus all email, recipient, package, delivery, retry, and permission decisions | To reconstruct |
-| Stage 3 — Supplier response completeness | Every relevant supplier has a complete response or an explicitly policy-authorized route for unresolved conditions | 384–385, 490–501, 467–469, plus all association, follow-up, attachment, version, image, and completion decisions | To reconstruct |
-| Stage 4 — Comparison and analysis | The buyer understands a provenance-preserving comparison and can acknowledge readiness for award recommendation | 322–327, 382–390, 437–440, 500, 503–504, plus all normalization, currency, readiness, analysis, and acknowledgment decisions | To reconstruct |
-| Stage 5 — Decide and defend award | The buyer approves a supported award record with trade-offs, evidence, rationale, and authority | 328 onward award decisions, 400–442, 554, plus all criteria, recommendation, rationale, authority, commit, export, and audit decisions | To reconstruct |
-| Cross-cutting data and state | Every claim, source, version, permission, transition, and approval remains traceable and enforceable | 1–218, 329–442, 491–501, 557, plus all data/state and storage decisions | To reconstruct |
-| Cross-cutting AI behavior | AI interprets, extracts, generates, proposes, and answers only within approved scope and evidence | 329–442, 496, 501, plus all AI, relevance, retrieval, extraction, analysis, recommendation, and leakage decisions | To reconstruct |
-| Cross-cutting deterministic behavior | Code, tools, and state controls enforce calculations, validation, permissions, transitions, storage, rendering, sending, and commits | 329–442, 497, 548, 552–558, plus all mechanism and server-boundary decisions | To reconstruct |
-| Runtime demo assets | Viewable, relevant, inspectable runtime evidence supports the complete guided journey without exposing expected findings | 457–489, 502–535, plus all asset-generation, freeze, isolation, and validation decisions | To reconstruct |
-| Verification and deployment | The implementation is tested against approved behavior and verified on Vercel | 437–443, 535, 548–561, plus all test, isolation, live-provider, browser, and deployment decisions | To reconstruct |
-
-## Completion rule
-
-No implementation area is ready merely because its anchor rows exist. The next activity is to expand each closure from the ledger and execute it. Only missing dependencies or contradictions return to decision review; a faithful derived closure does not require reapproval. Code is blocked only when the closure contains such an unresolved gap.
+The five visible surfaces are intentionally mapped to four stages: Landing is the entry surface, while surfaces 2–5 are stages 1–4. No second award workspace is canonical.
