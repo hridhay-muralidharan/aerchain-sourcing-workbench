@@ -40,6 +40,30 @@ Authority: process record, not product requirements.
 - Status: Submitted for product-manager review
 - Evidence: PRODUCT_REQUIREMENTS.md
 
+## T003 — Produce the product requirements document
+
+- Parent job: aerchain-product-assignment
+- Attempt: 1
+- Starting autonomy: explicit approval required
+- Inputs: approved decision register and job context
+- Objective: define the buyer job, product hypothesis, workflow, AI/scaffold boundaries, scenario, omissions, and acceptance criteria
+- Output: PRODUCT_REQUIREMENTS.md
+- Seer check: product language remains about Aera; scenario parameters remain scenario attributes; AI, deterministic, and buyer responsibilities are distinct
+- Status: Approved by product manager
+- Product-manager response: PRD approved
+- Approved on first attempt: Yes
+
+## T004 — Derive prototype specifications
+
+- Parent job: aerchain-product-assignment
+- Attempt: 1
+- Starting autonomy: explicit approval required
+- Inputs: approved PRODUCT_REQUIREMENTS.md and existing implementation context
+- Objective: define the low-fidelity product model, scaffold, AI, reviewer, and execution specifications
+- Outputs: LOW_FIDELITY_PRODUCT_MODEL.md, SCAFFOLD_SPEC.md, AI_SPEC.md, REVIEWER_SPEC.md, IMPLEMENTATION_PLAN.md
+- Seer check: specifications derive from the PRD; harness process remains outside product behavior; existing code is treated as candidate context only
+- Status: Submitted for product-manager review
+
 ## Review gate
 
 The product manager should review the open decision questions before the next task turns the candidate answers into an approved product requirements document. No product behavior is being changed by T002.
