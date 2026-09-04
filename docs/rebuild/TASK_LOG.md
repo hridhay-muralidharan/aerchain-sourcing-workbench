@@ -92,6 +92,13 @@ Authority: process record, not product requirements.
 - Outputs: PRD_SECTION_CHARTER.md and PRD_SECTION_SELF_REVIEW.md.
 - Current status: Submitted for product-manager review of the section structure.
 
+### Product-manager feedback on PRD section structure — T003 — 2026-09-04
+
+- Feedback: The proposed structure still allows overlap across several sections. Section purposes must be tested and separated before drafting.
+- Result: The first section charter remains unapproved. A second-pass overlap review and tighter revision proposal were created.
+- Outputs: PRD_SECTION_SELF_REVIEW_V2.md and PRD_SECTION_CHARTER_REVISION_PROPOSAL.md.
+- Current status: Submitted for product-manager review.
+
 ## T004 — Derive prototype specifications
 
 - Parent job: aerchain-product-assignment
