@@ -83,7 +83,7 @@ Aera must provide the following broad capabilities:
 - Identify and explain evidence gaps and support buyer-approved follow-up when additional supplier information is needed.
 - Reassess the comparison when approved follow-up evidence arrives.
 - Answer buyer questions in natural language using available evidence, comparison context, and visible uncertainty.
-- Support a rationale and an explicit human approval that commits the award decision within the prototype’s stated persistence boundary.
+- Support a rationale and an explicit human approval that records the award decision within the product’s supported persistence boundary.
 - Make the current state, required buyer action, evidence basis, and unresolved limitations understandable throughout the journey.
 
 ## 10. Product actors and responsibility boundaries
@@ -105,7 +105,7 @@ These criteria validate the product requirements as a whole. They are not the la
 - The product prevents or clearly blocks consequential actions when the required buyer authority, evidence, or readiness condition is absent.
 - A buyer can inspect the evidence and uncertainty behind a comparison and use that context to ask a natural-language question without the product presenting unsupported certainty as fact.
 - Approved follow-up can add evidence and produce an understandable reassessment of the affected comparison.
-- The final award is a separate human decision, with a visible rationale and a product record or explicitly labeled prototype representation of that decision.
+- The final award is a separate human decision, with a visible rationale and a recorded decision; any limitation in the prototype’s persistence is disclosed rather than implied to be production durability.
 - The prototype’s simulated integrations, live or unavailable AI behavior, persistence boundary, and excluded production capabilities are truthful and discoverable to a reviewer.
 - An independent reviewer can complete the product journey and find evidence for the intended outcomes, acceptance criteria, authority boundaries, and known limitations.
 

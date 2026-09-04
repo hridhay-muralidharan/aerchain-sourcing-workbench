@@ -58,15 +58,16 @@ Capabilities state what the product must enable. Acceptance criteria state how a
 - AI and deterministic responsibilities are stated at product boundary level only.
 - The acceptance criteria remain broad enough to be decomposed into outcome stories, while still naming authority, evidence, uncertainty, and truthfulness that cannot be safely omitted downstream.
 
-## Open review questions
+## Corrections made after internal review
 
-1. Does the product hypothesis state the intended causal mechanism without overcommitting to a particular solution shape?
-2. Are the product-level acceptance criteria sufficiently broad to precede outcome stories, yet sufficiently observable to guide later review?
-3. Should “comparison acknowledgment” remain an explicit buyer responsibility, or should it be treated as part of the buyer’s decision readiness without a separate product commitment?
-4. Is the persistence language truthful enough for the current prototype, or should the final criterion require only an explicitly labeled prototype representation until durable commit is implemented?
+- The hypothesis was kept as one causal bridge between the problem and product response; implementation mechanisms remain downstream.
+- Product-level acceptance criteria were kept broad and whole-product. The design, deterministic, and AI lenses remain reserved for outcome-story criteria.
+- Comparison acknowledgment remains in the buyer responsibility boundary because it is an approved consequential action in D-007. It is not promoted to a separate product outcome or screen.
+- Award language now requires a recorded decision while making prototype persistence limitations explicit. This preserves the product requirement without falsely claiming production durability.
+- Assignment fixture details remain in the final section and are not used as universal capability or scope statements.
 
 ## Result
 
-Status: Submitted for product-manager review.
+Status: Internal review complete; submitted for product-manager review.
 
-The generic PRD and acceptance-criteria charters remain proposals. This test does not carry them back to the harness repository or authorize downstream artifacts.
+The generic PRD and acceptance-criteria charters remain proposals. This test does not carry them back to the harness repository or authorize downstream artifacts. The product manager’s review should now focus on the product decisions and requirements, not on resolving avoidable structural or boundary defects.

@@ -132,3 +132,11 @@ The product manager should review the open decision questions before the next ta
 - Folder action: moved rejected attempts, superseded methodology, and process records out of the active root; no history was deleted
 - Status: Submitted for product-manager review
 - Review gate: approve or revise the charter application before deriving epics, outcome stories, low-fidelity flow, or executor specifications
+
+### Internal correction pass - 2026-09-04
+
+- The application review was used as an internal quality gate rather than a product-manager handoff.
+- Corrected the award-record requirement to state the product requirement while disclosing prototype persistence limits.
+- Confirmed that comparison acknowledgment remains a buyer responsibility from D-007 without becoming a new outcome or screen.
+- Confirmed that product-level acceptance criteria remain whole-product criteria; design, deterministic, and AI lenses remain downstream of outcome stories.
+- Result: structural self-review complete. The revised PRD is now the artifact submitted for product-manager review.
