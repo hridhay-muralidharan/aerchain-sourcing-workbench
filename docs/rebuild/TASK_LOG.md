@@ -48,6 +48,14 @@ Authority: process record, not product requirements.
 - Proposed correction: SCAFFOLD_SPEC_REVISION_PROPOSAL.md
 - Current status: Awaiting approval of the proposed boundary correction. The original SCAFFOLD_SPEC.md remains preserved as the rejected Attempt 1 artifact.
 
+### Product-manager feedback on low-fidelity model — T004 — 2026-09-04
+
+- Feedback: Several parts of the low-fidelity model drifted from expected user and information flow into designer decisions.
+- Result: The low-fidelity model requires the same boundary review as the scaffold specification.
+- Root-cause analysis: LOW_FIDELITY_ROOT_CAUSE_ANALYSIS.md
+- Proposed correction: LOW_FIDELITY_REVISION_PROPOSAL.md
+- Current status: Awaiting approval of the proposed correction. The original LOW_FIDELITY_PRODUCT_MODEL.md remains preserved as Attempt 1.
+
 ## T003 — Produce the product requirements document
 
 - Parent job: aerchain-product-assignment
