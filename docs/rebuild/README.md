@@ -24,6 +24,8 @@ The root contains only approved artifacts or artifacts currently submitted for r
 
 Historical and process navigation starts at `history/`, `methodology/`, and `process/`.
 
+The Aerchain contract-validation bundle has a standalone review page at `validation/aerchain-v1/index.html`, with one tab for each generated artifact.
+
 ## Sequence
 
 1. Job context and ambiguity register
