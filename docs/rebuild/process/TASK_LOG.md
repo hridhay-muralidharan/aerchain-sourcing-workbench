@@ -140,3 +140,14 @@ The product manager should review the open decision questions before the next ta
 - Confirmed that comparison acknowledgment remains a buyer responsibility from D-007 without becoming a new outcome or screen.
 - Confirmed that product-level acceptance criteria remain whole-product criteria; design, deterministic, and AI lenses remain downstream of outcome stories.
 - Result: structural self-review complete. The revised PRD is now the artifact submitted for product-manager review.
+
+## T005 - Define the pre-PRD layers
+
+- Parent job: aerchain-product-assignment methodology rebuild
+- Attempt: 1
+- Starting autonomy: explicit approval required
+- Inputs: enterprise AI solutions co-pilot operating model; generic PRD charter; generic acceptance-criteria charter; prior Aerchain artifact-boundary reviews
+- Objective: define the missing generic precursor to the PRD and the document that translates validated problem/workflow understanding into PRD inputs
+- Outputs: `PRE_PRD_DISCOVERY_CHARTER_PROPOSAL.md`, `PRODUCT_TRANSLATION_MAP_CHARTER_PROPOSAL.md`, and `PRE_PRD_LAYER_BOUNDARY_REVIEW.md`
+- Status: Submitted for product-manager review
+- Review gate: approve or revise both charters before applying them to Aera or carrying them to the harness repository

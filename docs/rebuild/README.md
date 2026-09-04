@@ -16,6 +16,9 @@ The root contains only approved artifacts or artifacts currently submitted for r
 
 - `DECISION_REGISTER.md` and `JOB_CONTEXT.md` are approved/input context.
 - `GENERIC_PRD_CHARTER_PROPOSAL.md`, `GENERIC_ACCEPTANCE_CRITERIA_CHARTER_PROPOSAL.md`, and `CHARTER_GENERALITY_SELF_REVIEW.md` are proposed methodology for review.
+- `PRE_PRD_DISCOVERY_CHARTER_PROPOSAL.md` defines the proposed problem/workflow layer before a PRD.
+- `PRODUCT_TRANSLATION_MAP_CHARTER_PROPOSAL.md` defines the proposed traceability bridge from validated problem to PRD inputs.
+- `PRE_PRD_LAYER_BOUNDARY_REVIEW.md` records the internal overlap review of those two charters.
 - `PRODUCT_REQUIREMENTS.md` is the Aera application draft of the proposed PRD charter.
 - `AERA_PRD_APPLICATION_REVIEW.md` is the self-review of that application.
 
