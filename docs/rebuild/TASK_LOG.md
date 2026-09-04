@@ -85,6 +85,13 @@ Authority: process record, not product requirements.
 - Dependency impact: epic, outcome-story, low-fidelity, design, scaffold, AI, reviewer, and implementation-plan artifacts remain downstream and must be re-derived after the corrected PRD is approved.
 - Current status: Revision required; awaiting product-manager review of the proposed PRD correction.
 
+### Product-manager feedback on PRD structure — T003 — 2026-09-04
+
+- Feedback: Each PRD section must contribute something distinct and move the reader in a logical sequence. The PRD must precede epics, outcome stories, and screens. The current draft repeats content across sections and is not ready to revise directly.
+- Result: The PRD prose remains unapproved. Its section architecture must be reviewed before another drafting attempt.
+- Outputs: PRD_SECTION_CHARTER.md and PRD_SECTION_SELF_REVIEW.md.
+- Current status: Submitted for product-manager review of the section structure.
+
 ## T004 — Derive prototype specifications
 
 - Parent job: aerchain-product-assignment
