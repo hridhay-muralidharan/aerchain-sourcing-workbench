@@ -56,6 +56,13 @@ Authority: process record, not product requirements.
 - Proposed correction: LOW_FIDELITY_REVISION_PROPOSAL.md
 - Current status: Awaiting approval of the proposed correction. The original LOW_FIDELITY_PRODUCT_MODEL.md remains preserved as Attempt 1.
 
+### Product-manager feedback on artifact boundaries — T004 — 2026-09-04
+
+- Feedback: Objectives and principles for the PRD and each implementation artifact had not been aligned first. The low-fidelity proposal risked becoming another PRD. Each artifact must serve a distinct purpose that the others cannot serve.
+- Result: The artifact chain requires a boundary reset before any individual specification is revised.
+- Output: ARTIFACT_CHARTER.md, ARTIFACT_SELF_REVIEW.md, and DESIGN_SPEC_SCOPE.md.
+- Current status: Submitted for product-manager review. No specification has been silently reclassified or overwritten.
+
 ## T003 — Produce the product requirements document
 
 - Parent job: aerchain-product-assignment
