@@ -18,4 +18,4 @@ The assignment is the job. The product prototype is one output of that job. Harn
 6. Independent scaffold review, AI review, and interaction review
 7. Assignment deliverables and completion evidence
 
-Current task: T004 — produce and review the prototype specifications.
+Current task: T003 revision — produce and review the product requirements document before epic and outcome-story decomposition.

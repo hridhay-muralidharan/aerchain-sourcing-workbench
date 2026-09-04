@@ -76,6 +76,15 @@ Authority: process record, not product requirements.
 - Product-manager response: PRD approved
 - Approved on first attempt: Yes
 
+### Product-manager feedback — T003 — 2026-09-04
+
+- Feedback: The PRD was organized around screens. The PRD must precede epics, outcome stories, and screens; it should define the product context, job, problem, hypothesis, principles, broad capabilities, scope, and product-level acceptance criteria.
+- Result: T003 approval withdrawn. PRODUCT_REQUIREMENTS.md Attempt 1 is preserved as the rejected version.
+- Root-cause analysis: PRD_ROOT_CAUSE_ANALYSIS.md
+- Proposed correction: PRD_REVISION_PROPOSAL.md
+- Dependency impact: epic, outcome-story, low-fidelity, design, scaffold, AI, reviewer, and implementation-plan artifacts remain downstream and must be re-derived after the corrected PRD is approved.
+- Current status: Revision required; awaiting product-manager review of the proposed PRD correction.
+
 ## T004 — Derive prototype specifications
 
 - Parent job: aerchain-product-assignment
