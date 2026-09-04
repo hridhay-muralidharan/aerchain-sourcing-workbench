@@ -1,6 +1,6 @@
 # Aerchain Sourcing Workbench — Decision Ledger
 
-> **Canonical reading order:** use [IMPLEMENTATION_REFERENCE.md](IMPLEMENTATION_REFERENCE.md) for current implementation behavior. Use this ledger for canonical decision history, approvals, corrections, and audit evidence. Detailed legacy sections below are historical records, not implementation instructions.
+> **Canonical reading order:** use [IMPLEMENTATION_INDEX.md](IMPLEMENTATION_INDEX.md) for current implementation behavior and traceability. Use this ledger for canonical decision history, approvals, corrections, and audit evidence. Detailed legacy sections below are historical records, not implementation instructions.
 
 ## Current canonical model
 

@@ -120,3 +120,15 @@ Authority: process record, not product requirements.
 ## Review gate
 
 The product manager should review the open decision questions before the next task turns the candidate answers into an approved product requirements document. No product behavior is being changed by T002.
+
+## T003 revision - Test the generic PRD charter on Aera
+
+- Parent job: aerchain-product-assignment
+- Attempt: 2
+- Starting autonomy: explicit approval required
+- Inputs: GENERIC_PRD_CHARTER_PROPOSAL.md; GENERIC_ACCEPTANCE_CRITERIA_CHARTER_PROPOSAL.md; CHARTER_GENERALITY_SELF_REVIEW.md; approved D-001 through D-012; JOB_CONTEXT.md
+- Objective: apply the proposed product-agnostic PRD charter to Aera without embedding epics, outcome stories, screens, or executor implementation choices
+- Outputs: `PRODUCT_REQUIREMENTS.md` and `AERA_PRD_APPLICATION_REVIEW.md`
+- Folder action: moved rejected attempts, superseded methodology, and process records out of the active root; no history was deleted
+- Status: Submitted for product-manager review
+- Review gate: approve or revise the charter application before deriving epics, outcome stories, low-fidelity flow, or executor specifications

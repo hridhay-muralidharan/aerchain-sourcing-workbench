@@ -1,125 +1,124 @@
 # Aera product requirements
 
-Audience: the product designer, product/software engineer, AI engineer, and reviewer.
-Purpose: define the product to be prototyped for the Aerchain assignment.
-Authority: approved product direction for T003; implementation may clarify mechanics but may not silently change the user outcome or authority model.
+Audience: product manager, future epic and outcome-story authors, and reviewers.
+Purpose: define why Aera should exist, who it serves, the product change required, the broad capabilities needed, and the product-level conditions for success.
+Authority: draft for review. It applies the proposed cross-product PRD charter to the approved Aera direction; it does not yet authorize downstream decomposition or implementation.
 
-## Product job
+## 1. Document purpose and decision boundary
 
-A category buyer must turn a business requirement into a defensible supplier award. Today, the work is spread across source documents, RFx templates, supplier emails, spreadsheets, attachments, and follow-up conversations. The buyer spends time reconstructing what each supplier actually offered and still has to explain why the selected award is fair.
+This document supports the decision to rebuild Aera as a trustworthy procurement decision-support product for category buyers.
 
-Aera should reduce the effort and uncertainty in that job by organizing the sourcing thread around evidence and buyer decisions.
+It establishes the product problem, intended outcomes, hypothesis, principles, scope, capabilities, responsibility boundaries, and product-level acceptance criteria. It does not define epics, outcome stories, screens, visual design, technical architecture, AI implementation, delivery sequencing, or review procedure.
 
-## Product hypothesis
+## 2. Context and opportunity
 
-If Aera assembles the business need and approved sourcing inputs into a buyer-reviewable RFx, then turns varied supplier responses into a provenance-preserving comparison that the buyer can interrogate, the buyer can reach and defend an award decision with less manual reconstruction and greater confidence.
+Procurement teams increasingly receive supplier responses through mixed documents and communication formats. The commercial decision is still made from evidence that may be incomplete, differently structured, ambiguous, or difficult to compare.
 
-The prototype tests this hypothesis through one complete, inspectable buyer journey. It does not claim production procurement automation.
+The opportunity is to improve the path from a buyer-approved request for quotation to a defensible supplier decision while preserving the evidence and judgment needed to stand behind that decision.
 
-## Primary user and authority
+## 3. Beneficiary and job
 
-The primary user is a category buyer or procurement manager.
+The primary beneficiary is a category buyer or procurement manager responsible for running a sourcing event and recommending a supplier award.
 
-The buyer owns:
+In the context of an approved RFx and incoming supplier responses, the buyer needs to turn dispersed and inconsistent evidence into a supported comparison, resolve material uncertainty, and make an award decision that can be explained to stakeholders.
 
-- the procurement ask and any corrections to it;
-- approval of the RFx before supplier release;
-- approval of a follow-up question or treatment;
-- acknowledgment that the comparison is sufficient for award recommendation; and
-- the final award decision and rationale.
+## 4. Problem and consequences
 
-Aera may interpret, extract, associate, normalize only when the rule is explicit, explain, and propose. Aera must not approve, invent supplier answers, silently resolve ambiguity, or choose the award on the buyer’s behalf.
+Supplier responses often vary in structure, terminology, completeness, and level of detail. The buyer must manually find relevant claims, determine which claims refer to which requested items, reconcile comparable values, and identify what still needs clarification.
 
-## End-to-end experience
+This creates avoidable effort and makes it difficult to distinguish a supported conclusion from an assumption. If uncertainty is hidden or authority is blurred, the buyer can make an incorrect comparison, send an unsupported follow-up, or approve an award that cannot be defended later.
 
-The product is one sourcing thread with five visible surfaces and four workflow stages. Landing is the entry surface, not a stage.
+## 5. Intended product outcomes
 
-### 1. Landing
+Aera should create these product outcomes:
 
-The buyer sees the procurement burden, the relief Aera provides, and the end-to-end path. A clear CTA starts the guided experience.
+1. A buyer can move from an approved sourcing requirement to a usable RFx with the relevant commercial and evaluation context intact.
+2. A buyer can inspect supplier evidence in a comparable form while retaining original claims, missing information, ambiguity, conflicts, and source references.
+3. A buyer can use natural-language questions to understand the comparison and receive answers grounded in the available evidence and visible uncertainty.
+4. A buyer can resolve material gaps through an approved follow-up and see how new supplier evidence changes the comparison.
+5. A buyer can make and defend a human-controlled award decision based on the comparison, evidence, and rationale available in the product.
 
-### 2. Create and approve RFx
+## 6. Product hypothesis
 
-The buyer starts with a business need and a set of approved or candidate sources. Aera proposes an RFx containing scope, line items, questionnaire, terms, and response instructions. The buyer can inspect the supporting sources and the issues or assumptions Aera found.
+If Aera combines structured sourcing context, evidence-linked supplier-response handling, bounded AI assistance, deterministic comparison behavior, and explicit buyer approvals, then category buyers will be able to reach a more efficient and defensible award decision with less manual reconciliation and less hidden uncertainty.
 
-The RFx cannot be released until the buyer has reviewed the draft and approved the current version. Unresolved material issues remain visible and block approval.
+The hypothesis depends on the product making uncertainty inspectable and preserving the boundary between assistance and authority. AI may help interpret, extract, associate, explain, and propose. The product must not allow AI to silently approve, invent supplier facts, normalize unresolved ambiguity, or make the award decision.
 
-### 3. Lock supplier responses
+## 7. Product principles and constraints
 
-The buyer reviews source-backed supplier contacts and the prepared RFx package, then sends the invitation through the available channel. Delivery status and incoming response evidence remain separate. Aera associates messages and attachments with suppliers, identifies gaps, and proposes the smallest useful follow-up.
+- Evidence remains inspectable: a material value or explanation can be traced to the supplier evidence and relevant sourcing context.
+- Uncertainty remains visible: missing, ambiguous, conflicting, and unresolved information is represented as such.
+- Assistance is bounded by authority: AI can assist and propose; the buyer owns consequential approvals and the award.
+- Deterministic behavior protects trust: state gates, permissions, calculations, approved normalization, persistence of buyer actions, and rendering do not depend on an unverified model assertion.
+- New evidence changes understanding transparently: a follow-up response can be associated with the relevant claim and its effect on comparison can be understood.
+- The product supports judgment rather than disguising judgment as certainty.
 
-The buyer explicitly approves any follow-up. Aera reassesses the new response version without erasing the earlier evidence. The stage is complete when each in-scope supplier has a complete response or an explicitly supported exception that is visible to the buyer.
+## 8. Product scope and non-goals
 
-### 4. Compare responses
+### In scope
 
-The buyer sees supplier offers on a common comparison basis while preserving original values, units, currencies, line-level claims, attachments, and source links. Missing, ambiguous, conflicting, and non-comparable values remain distinct.
+Aera will support the bounded end-to-end sourcing decision journey from requirement and RFx preparation through supplier evidence review, comparison, buyer questioning, approved follow-up, and human-controlled award approval.
 
-The buyer can ask natural-language questions such as which suppliers cover all lines, how totals compare, which delivery differences matter, or which claims need source review. Aera answers from the approved RFx, comparison, policy, and cited response evidence. It does not recommend or approve an award in this workspace.
+The first product scenario is corrugated packaging. It uses five vendors and thirty line items to exercise varied formats, incomplete responses, and inconsistent supplier claims. These counts describe the demonstration dataset, not a product limit.
 
-The buyer acknowledges that the comparison and resulting analysis are accurate and sufficient for award recommendation before moving to the final surface.
+### Non-goals for this product version
 
-### 5. Decide and defend award
+- Production-grade persistence and operational recovery.
+- Inbox or webhook ingestion.
+- Real email delivery.
+- General-purpose OCR hardening.
+- Multi-user permissions and collaboration.
+- Generalized policy authoring.
 
-Aera proposes a supplier, trade-offs, evidence, and a draft rationale using the approved RFx criteria and comparison. The buyer can edit the rationale and must explicitly approve the award. The approval produces a clear demo record and does not imply that Aera made the decision.
+Outbound delivery may be simulated in the prototype, but that simulation must be identified as such. Live AI behavior may be used when configured and must remain within the product boundaries above.
 
-## Product scaffold requirements
+## 9. Required product capabilities
 
-The scaffold must:
+Aera must provide the following broad capabilities:
 
-- preserve the current sourcing thread and stage state;
-- distinguish drafts, approved versions, response versions, comparison readiness, acknowledgment, and award approval;
-- keep AI outputs visually separate from buyer actions;
-- make evidence and source lineage inspectable at the point of decision;
-- perform calculations and normalization deterministically from approved inputs;
-- block consequential transitions when prerequisites are not met;
-- handle loading, empty, partial, and error states without losing prior progress;
-- make simulated integrations visibly simulated; and
-- keep hidden evaluation data out of the served product and AI inputs.
+- Capture and retain the sourcing requirement, evaluation context, and RFx content needed for supplier response and later decision-making.
+- Require buyer approval before an RFx becomes an active supplier-facing request.
+- Receive or represent supplier responses from varied formats and associate their claims with the relevant sourcing requirements.
+- Preserve original supplier values and source evidence while presenting approved comparable values and explicit states for missing, ambiguous, conflicting, or unresolved information.
+- Identify and explain evidence gaps and support buyer-approved follow-up when additional supplier information is needed.
+- Reassess the comparison when approved follow-up evidence arrives.
+- Answer buyer questions in natural language using available evidence, comparison context, and visible uncertainty.
+- Support a rationale and an explicit human approval that commits the award decision within the prototype’s stated persistence boundary.
+- Make the current state, required buyer action, evidence basis, and unresolved limitations understandable throughout the journey.
 
-## AI requirements
+## 10. Product actors and responsibility boundaries
 
-The AI must:
+The category buyer or procurement manager owns the sourcing requirement, RFx approval, follow-up approval, comparison acknowledgment, and final rationale and award approval.
 
-- draft an RFx from the business need and scoped sources;
-- identify evidence-backed gaps, ambiguity, conflicts, and assumptions;
-- associate relevant supplier messages and attachments without relying on filenames alone;
-- extract claims with original values and source evidence;
-- draft targeted follow-up questions;
-- reassess new evidence while preserving history;
-- answer buyer questions using only the approved scoped context; and
-- propose an award with trade-offs, evidence, and rationale.
+The supplier provides response claims and follow-up information. Supplier statements remain supplier evidence; the product does not convert them into facts without preserving their source and state.
 
-The AI must not:
+The AI capability interprets, extracts, associates, explains, answers, and proposes within the evidence and policy context made available to it. It does not approve the RFx, authorize a follow-up, resolve unsupported ambiguity, or award a supplier.
 
-- make an approval or state transition;
-- invent a value or supplier answer;
-- treat sending a follow-up as resolution;
-- hide an exception or unsupported claim;
-- use hidden evaluation cases or expected outcomes; or
-- recommend an award from an incomplete or non-decision-ready comparison.
+The deterministic product behavior controls workflow readiness, approved state transitions, permissions, calculations, approved normalization, evidence association, persistence of buyer actions, and the presentation of resulting state.
 
-## Assignment scenario
+## 11. Product-level acceptance criteria
 
-The prototype uses the existing fabricated corrugated-packaging dataset: five vendors, thirty line items, varied response formats, incomplete or inconsistent responses, questionnaire and quality evidence, multiple messages, currencies, and an angled phone photograph. These counts and files make the demo concrete; they are attributes of this assignment dataset, not limits on the product capability.
+These criteria validate the product requirements as a whole. They are not the later design, deterministic-scaffold, or AI criteria for individual outcome stories.
 
-AI extraction and reasoning loops must remain real when the live provider is configured. The prototype may simulate outbound delivery and other unavailable integrations only when the simulation is labeled and its boundary is documented.
+- The product supports one coherent journey from an approved sourcing requirement to a human-controlled award decision, with no consequential step represented as complete solely because AI produced an output.
+- A buyer can distinguish original supplier evidence, product-derived comparable values, unresolved uncertainty, and the basis for any recommendation or rationale.
+- The product prevents or clearly blocks consequential actions when the required buyer authority, evidence, or readiness condition is absent.
+- A buyer can inspect the evidence and uncertainty behind a comparison and use that context to ask a natural-language question without the product presenting unsupported certainty as fact.
+- Approved follow-up can add evidence and produce an understandable reassessment of the affected comparison.
+- The final award is a separate human decision, with a visible rationale and a product record or explicitly labeled prototype representation of that decision.
+- The prototype’s simulated integrations, live or unavailable AI behavior, persistence boundary, and excluded production capabilities are truthful and discoverable to a reviewer.
+- An independent reviewer can complete the product journey and find evidence for the intended outcomes, acceptance criteria, authority boundaries, and known limitations.
 
-## Deliberate omissions
+## 12. Assignment parameters
 
-This prototype does not attempt to provide production inbox/webhook integrations, real email delivery, durable multi-user storage, production-grade OCR, generalized policy authoring, enterprise identity and permissions, or autonomous award execution.
+This section records the context used to evaluate the prototype, without turning the assignment fixture into a universal product requirement.
 
-## Acceptance criteria
+- Scenario: corrugated packaging sourcing.
+- Demonstration dataset: five vendors and thirty line items.
+- Response variety: spreadsheets, documents, email, HTML, CSV, PDF, and a phone-photo SVG, including incomplete and inconsistent claims.
+- Evaluation focus: buyer completion of the journey, evidence inspection, natural-language analysis, visible uncertainty, approved follow-up, and separate human award approval.
+- Product truthfulness: simulated outbound delivery is labeled; hidden evaluation data remains evaluation truth and is not a product requirement.
 
-The product output passes when an independent reviewer can:
+## Review gate
 
-- start at Landing and understand the buyer job;
-- generate and inspect an RFx from the scenario inputs;
-- see the RFx approval boundary;
-- inspect supplier evidence across its varied formats and history;
-- see a comparison with original values, normalized values, uncertainty, and evidence links;
-- ask a bounded natural-language question and receive an evidence-backed answer;
-- observe the comparison acknowledgment gate;
-- inspect a proposed award with trade-offs and rationale;
-- edit and explicitly approve the award; and
-- distinguish every AI proposal, deterministic calculation, simulated integration, and human decision.
-
+This draft is ready for product-manager review against `GENERIC_PRD_CHARTER_PROPOSAL.md`. Approval is required before epics, outcome stories, low-fidelity flow, or executor specifications are derived.
