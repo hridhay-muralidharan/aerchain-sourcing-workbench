@@ -40,6 +40,14 @@ Authority: process record, not product requirements.
 - Status: Submitted for product-manager review
 - Evidence: PRODUCT_REQUIREMENTS.md
 
+### Product-manager feedback — T004 — 2026-09-04
+
+- Feedback: The scaffold specification crossed into technical design. The PRD should define product behavior and broad acceptance criteria; the low-fidelity model should define user and information flow; the scaffold specification should not prescribe technical details that belong to the downstream engineer.
+- Result: T004 Attempt 1 rejected; revision required.
+- Root-cause analysis: T004_ROOT_CAUSE_ANALYSIS.md
+- Proposed correction: SCAFFOLD_SPEC_REVISION_PROPOSAL.md
+- Current status: Awaiting approval of the proposed boundary correction. The original SCAFFOLD_SPEC.md remains preserved as the rejected Attempt 1 artifact.
+
 ## T003 — Produce the product requirements document
 
 - Parent job: aerchain-product-assignment
