@@ -99,6 +99,13 @@ Authority: process record, not product requirements.
 - Outputs: PRD_SECTION_SELF_REVIEW_V2.md and PRD_SECTION_CHARTER_REVISION_PROPOSAL.md.
 - Current status: Submitted for product-manager review.
 
+### Product-manager feedback on PRD charter level — T003 — 2026-09-04
+
+- Feedback: The PRD section charter must be derived from first principles and operate above assignment-specific context. A separate acceptance-criteria charter is needed. After approval, both charters should be carried back to the harness repository as reusable methodology.
+- Result: The assignment-shaped charter is not approved as the final methodology.
+- Outputs: GENERIC_PRD_CHARTER_PROPOSAL.md, GENERIC_ACCEPTANCE_CRITERIA_CHARTER_PROPOSAL.md, and CHARTER_GENERALITY_SELF_REVIEW.md.
+- Current status: Submitted for product-manager review. The harness repository remains unmodified.
+
 ## T004 — Derive prototype specifications
 
 - Parent job: aerchain-product-assignment
